@@ -1,0 +1,27 @@
+ <% provide(:title, "Sign in") %>
+<h1 style="color:chartreuse">Welcome to This Can't Be True</h1>
+<h2>Sign in</h2>
+<div>
+<p class="alert"><%= alert %></p>
+</div>
+<div class="row">
+  <div class="span6 offest3">
+
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+   <% end %>
+
+   <p>New user? </p>
+   <p><%= link_to "Sign Up", signup_path %></p>
+</div>
+</div>
+
+
+
