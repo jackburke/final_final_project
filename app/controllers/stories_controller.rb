@@ -1,5 +1,5 @@
 class StoriesController < ApplicationController
-  before_filter :sign_in?, only: [:edit, :create]
+  before_filter :signed_in_user, only: [:edit, :create]
   # GET /stories
   # GET /stories.json
   def index
@@ -84,7 +84,7 @@ class StoriesController < ApplicationController
 
 
 private
-  def signed_in?
+  def signed_in_user
     redirect_to signin_path, notice: "Please sign in." unless signed_in?
   end
 end

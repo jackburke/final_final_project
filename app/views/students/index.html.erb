@@ -21,12 +21,12 @@
     <td><%= student.school %></td>
     <td><%= student.city %></td>
     <td><%= student.state %></td>
-    <td><%= student.instructor_id %></td>
+    <td><%= link_to student.instructor.last_name, student.instructor %></td>
     <td><%= student.grad_year %></td>
     <td><%= student.email %></td>
     <td><%= link_to 'Show', student %></td>
-    <td><%= link_to 'Edit', edit_student_path(student) %></td>
-    <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%#= link_to 'Edit', edit_student_path(student) %></td>
+    <td><%#= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

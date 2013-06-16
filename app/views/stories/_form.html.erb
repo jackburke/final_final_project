@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :author_id %><br />
-    <%= f.number_field :author_id %>
+    <%= f.collection_select :author_id, Author.all, :id, :last_name %>
   </div>
   <div class="field">
     <%= f.label :synopsis %><br />

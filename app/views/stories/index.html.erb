@@ -1,9 +1,9 @@
-<h1>Listing stories</h1>
-
+<p class="notice"><%= notice %></p>
+<h1 style="color:chartreuse">Welcome to This Can't Be True</h1>
+<h2>Stories</h2>
 <table>
   <tr>
     <th>Title</th>
-    <th>Body</th>
     <th>Author</th>
     <th>Synopsis</th>
     <th></th>
@@ -14,8 +14,7 @@
 <% @stories.each do |story| %>
   <tr>
     <td><%= story.title %></td>
-    <td><%= story.body %></td>
-    <td><%= story.author_id %></td>
+    <td><%= link_to story.author.last_name, story.author %></td>
     <td><%= story.synopsis %></td>
     <td><%= link_to 'Show', story %></td>
     <td><%= link_to 'Edit', edit_story_path(story) %></td>
