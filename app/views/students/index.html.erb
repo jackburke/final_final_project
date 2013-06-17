@@ -7,7 +7,6 @@
     <th>School</th>
     <th>City</th>
     <th>State</th>
-    <th>Instructor</th>
     <th>Grad year</th>
     <th>Email</th>
     <th></th>
@@ -21,7 +20,6 @@
     <td><%= student.school %></td>
     <td><%= student.city %></td>
     <td><%= student.state %></td>
-    <td><%= link_to student.instructor.last_name, student.instructor %></td>
     <td><%= student.grad_year %></td>
     <td><%= student.email %></td>
     <td><%= link_to 'Show', student %></td>

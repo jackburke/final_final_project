@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_filter :signed_in?, only: [:edit, :update]
+  #before_filter :signed_in?, only: [:edit, :update]
   # GET /students
   # GET /students.json
   def index
