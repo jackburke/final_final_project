@@ -1,0 +1,19 @@
+<h3> Add a comment</h3>
+<%= form_for([@story, @story.comments.new]) do |f| %>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+   </div>
+   <div class="field">
+    <%= f.label :Comment %><br />
+    <%= f.text_area :body %>
+   </div>
+   <div class="actions">
+     <%= f.submit 'Add' %>
+  </div>
+  <% end %>
+

@@ -6,7 +6,9 @@ class User < ActiveRecord::Base
                     :format => {:with => /^[^@][\w.-]+@[\w.-]+[.][a-z]{2,4}$/i}
   before_save {|user| user.email = email.downcase}
   before_save :create_remember_token
-
+  has_one :student
+  has_one :instructor
+  has_one :author
 private
    def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64

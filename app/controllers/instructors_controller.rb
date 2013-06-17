@@ -45,10 +45,10 @@ class InstructorsController < ApplicationController
 
    respond_to do |format|
       if @instructor.save
-  #       format.html { redirect_to @instructor, notice: 'Instructor was successfully created.' }
-  #       format.json { render json: @instructor, status: :created, location: @instructor }
-      flash[:alert] = "Welcome to This Can't Be True"
-      redirect_to '/stories#index'
+        format.html { redirect_to '/stories#index', notice: 'Instructor was successfully created.' }
+        format.json { render json: @instructor, status: :created, location: @instructor }
+   #   flash[:alert] = "Welcome to This Can't Be True"
+    #  redirect_to '/stories#index'
       else
         format.html { render action: "new" }
         format.json { render json: @instructor.errors, status: :unprocessable_entity }

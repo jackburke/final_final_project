@@ -1,4 +1,5 @@
 Testing6::Application.routes.draw do
+
   root :to => 'sessions#new'
   match '/complete_student', to: 'students#new'
   match '/complete_instructor', to: 'instructors#new'
@@ -8,8 +9,9 @@ Testing6::Application.routes.draw do
   match '/signout', to: 'sessions#destroy'
 resources :authors
 
-  resources :stories
-
+  resources :stories do
+    resources :comments
+  end
   resources :users
 
   resources :instructors

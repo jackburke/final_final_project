@@ -1,0 +1,13 @@
+<%= div_for story do %>
+  <h2>
+  <%= link_to story.title, story %>
+  <%= link_to story.author.last_name, story.author %>
+  <span class='action'>
+     <%#= link_to "Edit", edit_story_path(story) %>
+     <%#= link_to "Delete", story, :confirm => "Are you sure?",
+   :method => :delete %>
+      </span>
+   </h2>
+   <%=story.body %>
+
+ <% end %>

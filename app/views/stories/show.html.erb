@@ -1,25 +1,13 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @story.title %>
-</p>
+<%= render @story %>
 
-<p>
-  <b>Body:</b>
-  <%= @story.body %>
-</p>
+<h3><Comments</h3>
+<div id="comments">
+  <%= render @story.comments %>
+<div>
 
-<p>
-  <b>Author:</b>
-  <%= @story.author_id %>
-</p>
+<%= render :file => 'comments/new' %>
 
-<p>
-  <b>Synopsis:</b>
-  <%= @story.synopsis %>
-</p>
-
-
-<%= link_to 'Edit', edit_story_path(@story) %> |
-<%= link_to 'Back', stories_path %>
+<%#= link_to 'Edit', edit_story_path(@story) %>
+<%#= link_to 'Back', stories_path %>
+<%= link_to 'Signout', '/signout' %>
