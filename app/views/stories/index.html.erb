@@ -17,8 +17,8 @@
     <td><%= link_to story.author.last_name, story.author %></td>
     <td><%= story.synopsis %></td>
     <td><%= link_to 'Show', story %></td>
-    <td><%= link_to 'Edit', edit_story_path(story) %></td>
-    <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%#= link_to 'Edit', edit_story_path(story) %></td>
+    <td><%#= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

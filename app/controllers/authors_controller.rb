@@ -1,5 +1,5 @@
 class AuthorsController < ApplicationController
-  # GET /authors
+  before_filter :signed_in # GET /authors
   # GET /authors.json
   def index
     @authors = Author.all
@@ -79,5 +79,9 @@ class AuthorsController < ApplicationController
       format.html { redirect_to authors_url }
       format.json { head :no_content }
     end
+  end
+private
+  def signed_in
+   redirect_to signin_path, notice: "Please sign in." unless signed_in?
   end
 end

@@ -20,6 +20,14 @@
   <%= @author.email %>
 </p>
 
-
+<p>
+  <b> Contributions </b>
+  <ul>
+    <% @author.contribution.each do |story| %>
+    <li> <%= story.title %> </li >
+    <% end %>
+   </ul>
+ </p>
 <%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back', authors_path %>
+<%= link_to 'Back', authors_path %> |
+<%= link_to 'Signout', '/signout' %>

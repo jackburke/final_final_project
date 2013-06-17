@@ -24,6 +24,16 @@
   <%= @instructor.state %>
 </p>
 
+<p>
+  <ul>
+    <b> Students </b>
+    <% @instructor.roll.each do |student| %>
+    <li><%= student.first_name%> <%= student.last_name %></li>
+    <% end %>
+    </ul>
+   </p>
+
 
 <%= link_to 'Edit', edit_instructor_path(@instructor) %> |
-<%= link_to 'Back', instructors_path %>
+<%= link_to 'Back', instructors_path %> |
+<%= link_to 'Signout', '/signout' %>

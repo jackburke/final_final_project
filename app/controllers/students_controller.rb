@@ -81,4 +81,8 @@ class StudentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+private
+  def signed_in
+     redirect_to signin_path, notice: "Please sign in." unless signed_in?
+  end
 end
